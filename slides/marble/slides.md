@@ -1,637 +1,658 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+background: https://source.unsplash.com/1920x1080/?3d,world,ai
+title: Marble World AI
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply UnoCSS classes to the current slide
+  ## Marble World AI 介紹
+  使用 AI 創建高保真、持久化的 3D 世界
+  
+  Learn more at [World Labs](https://docs.worldlabs.ai/)
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-# duration of the presentation
-duration: 35min
+duration: 30min
 ---
 
-# Welcome to Slidev
+# Marble World AI
 
-Presentation slides for developers
+## 用 AI 創造高保真 3D 世界
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    開始探索 <carbon:arrow-right class="inline"/>
+  </span>
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
+<div class="abs-br m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="在編輯器中打開" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+  <a href="https://docs.worldlabs.ai/" target="_blank" alt="World Labs 文檔" title="World Labs 文檔" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:logo-github />
   </a>
 </div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# 什么是 Marble？
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+<div class="grid grid-cols-2 gap-8 mt-8">
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+<div>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+**Marble** 是 World Labs 的首個產品
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+- 🎨 **高保真 3D 世界** - 創建逼真的 3D 環境
+- 🔄 **持久化** - 世界可以被保存和分享
+- 🤖 **AI 驅動** - 由多模態世界模型提供支持
+- 🚀 **簡單易用** - 任何人都可以輕鬆創建
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+</div>
 
-<!--
-Here is another comment.
--->
+<div>
+
+**核心能力**
+
+- 從文本、圖像、視頻重建 3D 世界
+- 生成完整的 3D 環境
+- 模擬和編輯 3D 空間
+- 支持多種導出格式
+
+</div>
+
+</div>
 
 ---
 transition: slide-up
 level: 2
 ---
 
-# Navigation
+# Marble 界面導航
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+<div class="grid grid-cols-3 gap-6 mt-8">
 
-## Keyboard Shortcuts
+<div v-click>
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+## 🖼️ Gallery
+**[畫廊](https://marble.worldlabs.ai/)**
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+瀏覽和探索社區創建的世界，發現靈感，訪問自己創建的世界
+
+</div>
+
+<div v-click>
+
+## ✨ Create
+**[創建](https://marble.worldlabs.ai/create)**
+
+主要工作區，使用文本、圖像、視頻或 3D 結構生成新的 3D 世界
+
+</div>
+
+<div v-click>
+
+## 🎬 Studio
+**[工作室](https://marble.worldlabs.ai/projects)**
+
+高級工具，用於編輯、組合多個世界，並創建電影級的環境錄製
+
+</div>
+
+</div>
 
 ---
 layout: two-cols
 layoutClass: gap-16
 ---
 
-# Table of contents
+# 創建世界的方式
 
-You can use the `Toc` component to generate a table of contents for your slides:
+Marble 提供多種創建 3D 世界的方法，適應不同的創作工作流：
 
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
+::left::
 
 <div v-click>
 
-This shows up when you click the slide:
+### 🎲 Preset
+**預設模板**
 
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
+瀏覽並選擇精選的預設示例，快速生成基於流行主題和風格的世界
 
 </div>
 
----
+<div v-click class="mt-4">
 
-# Motions
+### 📝 Text Prompt
+**文本提示**
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+用自然語言描述你的願景，讓 Marble 的 AI 生成完整的 3D 環境
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
 </div>
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
+<div v-click class="mt-4">
 
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+### 🖼️ Single Image
+**單張圖片**
 
-[Learn more](https://sli.dev/guide/animations.html#motion)
+將任何照片或藝術作品轉換為沉浸式 3D 世界
+
+</div>
+
+::right::
+
+<div v-click>
+
+### 🖼️ Multiple Images
+
+組合多張圖片以指定更多視覺細節，可以指定每張圖片的方向位置
+
+</div>
+
+<div v-click class="mt-4">
+
+### 🌐 Panorama
+
+上傳 360° 全景圖像，獲得對世界佈局的最大控制和最準確的空間表示
+
+</div>
+
+<div v-click class="mt-4">
+
+### 🎥 Video
+
+上傳短視頻（小於 100MB）提供豐富的空間信息
+
+</div>
+
+<div v-click class="mt-4">
+
+### 🔨 3D Structure (Chisel)
+
+使用內置 3D 建模工具構建幾何佈局和建築結構作為詳細世界生成的基礎
 
 </div>
 
 ---
-
-# $\LaTeX$
-
-$\LaTeX$ is supported out-of-box. Powered by [$\KaTeX$](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
+transition: slide-up
 ---
 
-# Diagrams
+# 創建方式詳解（一）
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+<div class="grid grid-cols-2 gap-6 mt-8">
 
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
+<div v-click>
 
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+## 📝 [文本提示](https://marble.worldlabs.ai/create)
+**最簡單的方式**
+
+```
+"A futuristic technology lab, 
+featuring holographic projections 
+and robotic assistants."
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
+- 自然語言描述
+- AI 自動生成
+- 適合快速原型
 
 </div>
 
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
+<div v-click>
+
+## 🖼️ 圖像轉 3D
+**從 2D 到 3D**
+
+- **單張圖片**：快速轉換
+- **多張圖片**：更精確的控制
+- **全景圖**：最準確的空間表示
+
+支持方向定位：
+- Front（前）
+- Back（後）
+- Left（左）
+- Right（右）
+- Auto Layout（自動佈局）
+
+</div>
+
+</div>
 
 ---
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
+transition: slide-up
 ---
 
-# Draggable Elements
+# 創建方式詳解（二）
 
-Double-click on the draggable elements to edit their positions.
+<div class="grid grid-cols-2 gap-6 mt-8">
 
-<br>
+<div v-click>
 
-###### Directive Usage
+## 🎥 [視頻輸入](https://marble.worldlabs.ai/create)
+**豐富的空間信息**
 
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
+- 上傳短視頻（< 100MB）
+- 適合 360° 旋轉視圖
+- 提供豐富的空間上下文
 
-<br>
+</div>
 
-###### Component Usage
+<div v-click>
 
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
+## 🔨 [Chisel 工具](https://docs.worldlabs.ai/guides/chisel/chisel_basics)
+**3D 結構建模**
 
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
+- 內置 3D 建模工具
+- 構建幾何佈局
+- 創建建築結構
+- 作為詳細生成的基礎
 
-<img v-drag="'square'" src="https://sli.dev/logo.png">
+</div>
 
-###### Draggable Arrow
+</div>
 
-```md
-<v-drag-arrow two-way />
-```
+<!--
+# 編輯世界
 
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
+<div class="grid grid-cols-3 gap-6 mt-8">
+
+<div v-click>
+
+## 🌐 Pano Edit
+**全景編輯**
+
+通過全景表示編輯世界
+
+- 選擇特定區域
+- 使用自然語言描述更改
+- 進行針對性修改
+- 保留整體環境
+
+</div>
+
+<div v-click>
+
+## 👆 Click and Expand
+**點擊擴展**
+
+超越原始邊界擴展世界
+
+- 點擊未探索區域
+- 生成無縫擴展
+- 自然連接到現有內容
+- 無限擴展可能
+
+</div>
+
+<div v-click>
+
+## 🎨 Variation
+**變化生成**
+
+生成世界的替代版本
+
+- 保持核心元素和風格
+- 探索不同可能性
+- 從同一起點創造變化
+- 快速迭代
+
+</div>
+
+</div>
+-->
 
 ---
-src: ./pages/imported-slides.md
-hide: false
+layout: two-cols
+layoutClass: gap-16
 ---
 
+# Studio 工具
+
+高級工作室功能，將世界創作提升到新水平
+
+::left::
+
+<div v-click>
+
+## 🎭 Compose
+**組合**
+
+連接和排列多個現有世界
+
+- 創建更大的無縫環境
+- 適合遊戲地圖
+- 建築綜合體
+- 廣闊的連接體驗
+
+</div>
+
+::right::
+
+<div v-click>
+
+## 🎬 [Record](https://docs.worldlabs.ai/guides/studio/record)
+**錄製**
+
+創建電影級相機動畫
+
+- 平滑的飛行視頻
+- 展示環境
+- 創建預告片
+- 專業演示
+
+</div>
+
+---
+transition: slide-up
 ---
 
-# Monaco Editor
+# 導出和分享（一）
 
-Slidev provides built-in Monaco Editor support.
+<div class="grid grid-cols-2 gap-8 mt-8">
 
-Add `{monaco}` to the code block to turn it into an editor:
+<div v-click>
 
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
+## 🌐 Web Sharing
+**網頁分享**
 
-const arr = ref(emptyArray(10))
-```
+- 複製可分享鏈接
+- 基於瀏覽器的查看和探索
+- 無需安裝
 
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+</div>
 
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
+<div v-click>
 
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+## 🥽 VR Experience
+**VR 體驗**
+
+- 生成 VR 兼容鏈接
+- 沉浸式虛擬現實查看
+- 完整的 VR 支持
+
+</div>
+
+<div v-click>
+
+## 💻 Development Assets
+**開發資源**
+
+- 導出 3D 模型和紋理
+- 用於遊戲引擎
+- [開發工具集成](https://sparkjs.dev/)
+
+</div>
+
+</div>
+
+---
+transition: slide-up
+---
+
+# 導出和分享（二）
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div v-click>
+
+## 🎨 DCC Integration
+**數字內容創作集成**
+
+- Blender
+- Maya
+- 3ds Max
+- 專業工作流支持
+
+</div>
+
+<div v-click>
+
+## 🖨️ Mesh Export
+**網格導出**
+
+- 導出乾淨的 3D 幾何體
+- 3D 打印
+- CAD 軟件
+- 進一步建模工作
+
+</div>
+
+<div v-click>
+
+## 📦 Gaussian Splat Export
+**高斯點雲導出**
+
+- 最新的 3D 表示技術
+- 高質量渲染
+- 實時性能
+
+</div>
+
+</div>
+
+---
+transition: slide-up
+---
+
+# 生成時間
+
+<div class="mt-8">
+
+我們不斷努力使 Marble 中的世界生成更快
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div v-click>
+
+### 快速生成
+- **從文本/圖像/3D 結構創建全景**：~30 秒
+- **創建草稿**：~20 秒
+- **編輯全景**：~20 秒
+
+</div>
+
+<div v-click>
+
+### 完整生成
+- **從多圖像/視頻創建全景**：~2 分鐘
+- **創建完整世界**：~5 分鐘
+- **擴展世界**：~5 分鐘
+
+</div>
+
+<div v-click class="col-span-2">
+
+### 高質量導出
+- **生成高質量網格**：~1 小時 (Mesh)
+
+</div>
+
+</div>
+
+</div>
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# 核心優勢
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+<div class="grid grid-cols-3 gap-8 mt-12">
 
-<PoweredBySlidev mt-10 />
+<div v-click>
+
+## 🚀 快速
+從想法到 3D 世界只需幾分鐘
+
+</div>
+
+<div v-click>
+
+## 🎨 高質量
+高保真、逼真的 3D 環境
+
+</div>
+
+<div v-click>
+
+## 🔄 靈活
+多種輸入方式，適應不同需求
+
+</div>
+
+<div v-click>
+
+## 🛠️ 強大
+豐富的編輯和導出工具
+
+</div>
+
+<div v-click>
+
+## 🌐 可分享
+輕鬆分享和發布你的世界
+
+</div>
+
+<div v-click>
+
+## 🤖 AI 驅動
+先進的 AI 技術，簡化創作流程
+
+</div>
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# 應用場景
+
+<div class="grid grid-cols-2 gap-6 mt-8">
+
+<div v-click>
+
+## 🎮 遊戲開發
+- 快速原型設計
+- 環境創建
+- 關卡設計
+
+</div>
+
+<div v-click>
+
+## 🏗️ 建築設計
+- 可視化設計
+- 空間規劃
+- 客戶演示
+
+</div>
+
+<div v-click>
+
+## 🎬 內容創作
+- 虛擬場景
+- 視頻背景
+- 創意項目
+
+</div>
+
+<div v-click>
+
+## 🎓 教育培訓
+- 虛擬學習環境
+- 歷史場景重建
+- 科學可視化
+
+</div>
+
+<div v-click>
+
+## 🏢 商業應用
+- 產品展示
+- 虛擬展廳
+- 營銷材料
+
+</div>
+
+<div v-click>
+
+## 🎨 藝術創作
+- 數字藝術
+- 概念設計
+- 創意探索
+
+</div>
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# 開始使用
+
+<div class="mt-12">
+
+## 訪問 Marble
+
+<div class="text-2xl mt-6">
+  [marble.worldlabs.ai](https://marble.worldlabs.ai)
+</div>
+
+</div>
+
+<div class="grid grid-cols-3 gap-8 mt-12">
+
+<div v-click>
+
+### 1️⃣ 註冊賬號
+創建你的 World Labs 賬號
+
+</div>
+
+<div v-click>
+
+### 2️⃣ 選擇創建方式
+從文本、圖像或視頻開始
+
+</div>
+
+<div v-click>
+
+### 3️⃣ 生成和分享
+創建你的第一個 3D 世界
+
+</div>
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# 了解更多
+
+<div class="mt-12 text-xl">
+
+[📚 完整文檔](https://docs.worldlabs.ai/) · 
+[💬 社區支持](https://docs.worldlabs.ai/) · 
+[❓ 常見問題](https://docs.worldlabs.ai/)
+
+</div>
+
+<div class="mt-16 text-4xl">
+感謝觀看！
+</div>
+
+<div class="mt-8 text-lg opacity-75">
+開始創建你的第一個 3D 世界吧 🚀
+</div>
